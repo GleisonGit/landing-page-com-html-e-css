@@ -1,279 +1,59 @@
-/* General Styles */
+/* style.css */
 body {
-    font-family: Arial, sans-serif; /* Or your chosen Google Font */
-    margin: 0;
-    padding: 0;
-    background-color: #000; /* Dark background as seen in the image */
-    color: #fff; /* White text by default */
-    line-height: 1.6;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
 }
 
-.container {
-    max-width: 1200px; /* Adjust as needed */
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box; /* Include padding in element's total width and height */
-}
-
-/* Header Section */
 header {
-    background-color: #1a1a1a; /* Dark background for header */
-    padding: 20px 0;
-    position: relative; /* For positioning the code snippet */
-    overflow: hidden; /* To contain background elements */
+  background-color: #0d0d0d;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
 }
 
-header .logo {
-    display: block;
-    margin: 0 auto;
-    width: 150px; /* Adjust size */
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
 }
 
-.background-code {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('path/to/your/code-snippet-background.png'); /* Or use text styling */
-    background-size: cover;
-    background-position: center;
-    opacity: 0.1; /* Adjust transparency */
-    z-index: 0; /* Ensure it's behind the logo */
+.modulos {
+  background-color: #ffffff;
+  padding: 30px 20px;
 }
 
-/* Hero Section */
-.hero-section {
-    text-align: center;
-    padding: 100px 20px;
-    background-color: #0d0d0d; /* Slightly different dark background */
+.modulos h2 {
+  color: #0d0d0d;
+  font-size: 1.8em;
+  margin-bottom: 20px;
 }
 
-.hero-section h1 {
-    font-size: 3em;
-    color: #00f; /* Or the specific blue color from the logo */
-    margin-bottom: 20px;
-    text-transform: uppercase;
+.modulos ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-.hero-section p {
-    font-size: 1.2em;
-    margin-bottom: 40px;
+.modulos li {
+  background: #e0e0e0;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-.button {
-    display: inline-block;
-    background-color: #00f; /* Blue button color */
-    color: #fff;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+.chamada {
+  background-color: #d1ecf1;
+  padding: 30px 20px;
+  text-align: center;
 }
 
-.button:hover {
-    background-color: #00c; /* Darker blue on hover */
+.chamada h2 {
+  font-size: 2em;
+  color: #0c5460;
 }
 
-/* What You Will Learn Section */
-.what-learn-section {
-    padding: 80px 20px;
-    text-align: center;
-    background-color: #000;
-}
-
-.what-learn-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    color: #fff;
-}
-
-.what-learn-section p {
-    font-size: 1.1em;
-    margin-bottom: 50px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.modules-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
-    gap: 20px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.module-item button {
-    width: 100%;
-    padding: 20px;
-    background-color: #333; /* Dark gray for buttons */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.module-item button:hover {
-    background-color: #555;
-}
-
-/* Call to Action Section (Transforme o mundo com a gente) */
-.transform-section {
-    position: relative;
-    padding: 150px 20px; /* Adjust padding as needed */
-    color: #fff;
-    overflow: hidden; /* For containing the background image */
-}
-
-.transform-section .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Cover the entire section */
-    opacity: 0.3; /* Adjust opacity to make text readable */
-    z-index: 0;
-}
-
-.transform-section .content-overlay {
-    position: relative; /* Bring content to the front */
-    z-index: 1;
-    text-align: left; /* Text alignment from the image */
-    max-width: 500px; /* Limit width of the text block */
-}
-
-.transform-section h2 {
-    font-size: 3em;
-    line-height: 1.1;
-    text-transform: lowercase; /* As seen in the image */
-}
-
-/* Evolve Section */
-.evolve-section {
-    padding: 80px 20px;
-    text-align: center;
-    background-color: #0d0d0d;
-}
-
-.evolve-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 50px;
-    color: #fff;
-}
-
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.testimonial-card {
-    background-color: #1a1a1a; /* Dark background for cards */
-    padding: 25px;
-    border-radius: 10px;
-    text-align: center;
-    position: relative; /* For positioning profile pic */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.testimonial-card .profile-pic {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #00f; /* Blue border around profile pic */
-    margin-bottom: 15px;
-}
-
-.testimonial-card .name {
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #00f; /* Blue name */
-}
-
-.testimonial-card .role {
-    font-size: 0.9em;
-    color: #aaa;
-    margin-bottom: 15px;
-}
-
-.testimonial-card .quote {
-    font-style: italic;
-    font-size: 0.95em;
-    color: #ddd;
-}
-
-
-/* Footer Section */
-footer {
-    background-color: #1a1a1a;
-    padding: 40px 20px;
-    text-align: center;
-    color: #bbb;
-}
-
-footer p {
-    margin-bottom: 20px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-footer .footer-logo {
-    width: 200px; /* Adjust size */
-    margin-bottom: 10px;
-}
-
-footer a {
-    color: #00f; /* Blue link color */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive Adjustments (Example - add more as needed) */
-@media (max-width: 768px) {
-    .hero-section h1 {
-        font-size: 2.5em;
-    }
-
-    .what-learn-section h2, .evolve-section h2 {
-        font-size: 2em;
-    }
-
-    .transform-section h2 {
-        font-size: 2.5em;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-section h1 {
-        font-size: 2em;
-    }
-
-    .button {
-        padding: 10px 20px;
-    }
-
-    .what-learn-section h2, .evolve-section h2 {
-        font-size: 1.8em;
-    }
-
-    .transform-section h2 {
-        font-size: 2em;
-    }
-
-    .modules-grid, .testimonials-grid {
-        grid-template-columns: 1fr; /* Stack on small screens */
-    }
+.chamada p {
+  margin: 10px 0;
+  font-size: 1.1em;
 }
