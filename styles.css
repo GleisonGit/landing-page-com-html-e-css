@@ -1,279 +1,157 @@
-/* General Styles */
 body {
-    font-family: Arial, sans-serif; /* Or your chosen Google Font */
-    margin: 0;
-    padding: 0;
-    background-color: #000; /* Dark background as seen in the image */
-    color: #fff; /* White text by default */
-    line-height: 1.6;
+  background-color: black;
 }
 
-.container {
-    max-width: 1200px; /* Adjust as needed */
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box; /* Include padding in element's total width and height */
+h2 {
+  font-size: 2rem;
+  color: #33a8db;
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
 }
 
-/* Header Section */
-header {
-    background-color: #1a1a1a; /* Dark background for header */
-    padding: 20px 0;
-    position: relative; /* For positioning the code snippet */
-    overflow: hidden; /* To contain background elements */
+p {
+  color: white;
 }
 
-header .logo {
-    display: block;
-    margin: 0 auto;
-    width: 150px; /* Adjust size */
+section {
+  margin: 100px auto;
 }
 
-.background-code {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('path/to/your/code-snippet-background.png'); /* Or use text styling */
-    background-size: cover;
-    background-position: center;
-    opacity: 0.1; /* Adjust transparency */
-    z-index: 0; /* Ensure it's behind the logo */
+.banner {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(49, 168, 221, 0.2),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../images/banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 600px;
+  padding-top: 60px;
+  border-bottom: 1px solid #33a8db80;
 }
 
-/* Hero Section */
-.hero-section {
-    text-align: center;
-    padding: 100px 20px;
-    background-color: #0d0d0d; /* Slightly different dark background */
+.banner .banner-content {
+  color: white;
+  width: 600px;
+  margin: auto;
+  text-align: center;
 }
 
-.hero-section h1 {
-    font-size: 3em;
-    color: #00f; /* Or the specific blue color from the logo */
-    margin-bottom: 20px;
-    text-transform: uppercase;
+.banner h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: transparent;
+  background: -webkit-linear-gradient(#33a8db, #1472b7);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
-.hero-section p {
-    font-size: 1.2em;
-    margin-bottom: 40px;
+.banner p {
+  font-size: 1.25rem;
+  margin: 16px 0 24px;
 }
 
-.button {
-    display: inline-block;
-    background-color: #00f; /* Blue button color */
-    color: #fff;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+.banner .logo {
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 260px;
+  width: 260px;
+  margin: auto;
+  border-radius: 50%;
+  padding: 16px;
+  margin-bottom: 16px;
 }
 
-.button:hover {
-    background-color: #00c; /* Darker blue on hover */
+.banner .logo img {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-/* What You Will Learn Section */
-.what-learn-section {
-    padding: 80px 20px;
-    text-align: center;
-    background-color: #000;
+.banner .banner-content button {
+  color: #31a8dd;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 16px 32px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  background-color: transparent;
+  border-image: linear-gradient(#3ba1cd, #1572b7);
+  border-image-slice: 10;
+  border-radius: 30px;
 }
 
-.what-learn-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    color: #fff;
+#course-content {
+  width: 800px;
+  text-align: center;
 }
 
-.what-learn-section p {
-    font-size: 1.1em;
-    margin-bottom: 50px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+#course-content .modules-list {
+  margin: 24px 0;
 }
 
-.modules-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
-    gap: 20px;
-    max-width: 900px;
-    margin: 0 auto;
+#course-content .modules-list .module {
+  color: white;
+  width: 530px;
+  margin: 0 auto 24px;
+  border: 1px solid #33a8db;
+  background-color: #252525;
+  padding: 16px;
+  border-radius: 100px;
+  box-shadow: inset -5px 6px 8px rgba(0, 0, 0, 0.7);
 }
 
-.module-item button {
-    width: 100%;
-    padding: 20px;
-    background-color: #333; /* Dark gray for buttons */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+#course-content .modules-list .module span {
+  color: #33a8db;
 }
 
-.module-item button:hover {
-    background-color: #555;
+#transform-world {
+  height: 560px;
+  background-size: cover;
+  background-image: url("../images/woman-code.png");
+  background-attachment: fixed;
+  border-top: 1px solid #33a8db80;
+  border-bottom: 1px solid #33a8db80;
+  padding: 200px;
 }
 
-/* Call to Action Section (Transforme o mundo com a gente) */
-.transform-section {
-    position: relative;
-    padding: 150px 20px; /* Adjust padding as needed */
-    color: #fff;
-    overflow: hidden; /* For containing the background image */
+#transform-world p {
+  font-weight: 900;
+  font-size: 2.5rem;
+  text-transform: lowercase;
+  max-width: 250px;
+  text-shadow: 3px 2px #33a8db;
 }
 
-.transform-section .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Cover the entire section */
-    opacity: 0.3; /* Adjust opacity to make text readable */
-    z-index: 0;
+#professional-challenges {
+  text-align: center;
+  width: 800px;
 }
 
-.transform-section .content-overlay {
-    position: relative; /* Bring content to the front */
-    z-index: 1;
-    text-align: left; /* Text alignment from the image */
-    max-width: 500px; /* Limit width of the text block */
+#professional-challenges img {
+  margin: 32px 0;
 }
 
-.transform-section h2 {
-    font-size: 3em;
-    line-height: 1.1;
-    text-transform: lowercase; /* As seen in the image */
-}
-
-/* Evolve Section */
-.evolve-section {
-    padding: 80px 20px;
-    text-align: center;
-    background-color: #0d0d0d;
-}
-
-.evolve-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 50px;
-    color: #fff;
-}
-
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.testimonial-card {
-    background-color: #1a1a1a; /* Dark background for cards */
-    padding: 25px;
-    border-radius: 10px;
-    text-align: center;
-    position: relative; /* For positioning profile pic */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.testimonial-card .profile-pic {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #00f; /* Blue border around profile pic */
-    margin-bottom: 15px;
-}
-
-.testimonial-card .name {
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #00f; /* Blue name */
-}
-
-.testimonial-card .role {
-    font-size: 0.9em;
-    color: #aaa;
-    margin-bottom: 15px;
-}
-
-.testimonial-card .quote {
-    font-style: italic;
-    font-size: 0.95em;
-    color: #ddd;
-}
-
-
-/* Footer Section */
 footer {
-    background-color: #1a1a1a;
-    padding: 40px 20px;
-    text-align: center;
-    color: #bbb;
+  padding: 60px 0;
+  text-align: center;
+  background-image: linear-gradient(
+    rgba(50, 168, 219, 0),
+    rgba(50, 168, 219, 0.2)
+  );
+  border-top: 1px solid #33a8db80;
 }
 
-footer p {
-    margin-bottom: 20px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-footer .footer-logo {
-    width: 200px; /* Adjust size */
-    margin-bottom: 10px;
+footer .dio-logo {
+  width: 300px;
 }
 
 footer a {
-    color: #00f; /* Blue link color */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive Adjustments (Example - add more as needed) */
-@media (max-width: 768px) {
-    .hero-section h1 {
-        font-size: 2.5em;
-    }
-
-    .what-learn-section h2, .evolve-section h2 {
-        font-size: 2em;
-    }
-
-    .transform-section h2 {
-        font-size: 2.5em;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-section h1 {
-        font-size: 2em;
-    }
-
-    .button {
-        padding: 10px 20px;
-    }
-
-    .what-learn-section h2, .evolve-section h2 {
-        font-size: 1.8em;
-    }
-
-    .transform-section h2 {
-        font-size: 2em;
-    }
-
-    .modules-grid, .testimonials-grid {
-        grid-template-columns: 1fr; /* Stack on small screens */
-    }
+  color: #33a8db;
+  font-weight: bold;
+  text-decoration: none;
 }
